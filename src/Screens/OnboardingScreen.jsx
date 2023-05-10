@@ -9,11 +9,13 @@ import CustomButton from '../Components/CustomButton/CustomButton';
 import { AntDesign } from '@expo/vector-icons';
 import { Animated } from 'react-native';
 import { TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 const OnboardingScreen = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const ref = useRef();
   const scrollX = useRef(new Animated.Value(0)).current;
+  const navigation = useNavigation();
 
   const updateCurrentIndex = (e) => {
     const contentOffsetX = e.nativeEvent.contentOffset.x;
@@ -79,7 +81,10 @@ const OnboardingScreen = () => {
       />
       <View style={{ position: 'absolute', bottom: 130, alignSelf: 'center' }}>
         {currentIndex === OnboardList.length - 1 ? (
-          <CustomButton text={'Get Started'} />
+          <CustomButton
+            text={'Get Started'}
+            onPress={() => navigation.navigate('SignUpScreen')}
+          />
         ) : (
           <CustomButton text={'Next'} onPress={goToNextSlide} />
         )}
