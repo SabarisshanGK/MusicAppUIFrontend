@@ -35,8 +35,6 @@ const SignInScreen = () => {
             />
           </View>
 
-          {/* Email */}
-
           {/* Password */}
           <View style={styles.textInput}>
             <MaterialCommunityIcons
@@ -51,7 +49,9 @@ const SignInScreen = () => {
               style={{ color: colors.white, width: '80%' }}
             />
           </View>
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('ForgotPassword')}
+          >
             <Text style={{ color: colors.blue, marginLeft: 200 }}>
               Forgot Password?
             </Text>
