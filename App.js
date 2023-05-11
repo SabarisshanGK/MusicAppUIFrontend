@@ -8,6 +8,7 @@ import SignInScreen from './src/Screens/SignInScreen';
 import ForgotPasswordScreen from './src/Screens/ForgotPasswordScreen';
 import OTPScreen from './src/Screens/OTPScreen';
 import UpdatePasswordScreen from './src/Screens/UpdatePasswordScreen';
+import MusicPlayer from './src/Screens/MusicPlayer';
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -24,6 +25,7 @@ export default function App() {
         <Stack.Screen name="ForgotPassword" component={ForgotPasswordScreen} />
         <Stack.Screen name="OTP" component={OTPScreen} />
         <Stack.Screen name="UpdatePassword" component={UpdatePasswordScreen} />
+        <Stack.Screen name="MusicPlayer" component={MusicPlayer} />
       </Stack.Navigator>
     </NavigationContainer>
   );

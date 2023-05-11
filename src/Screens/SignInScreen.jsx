@@ -61,7 +61,10 @@ const SignInScreen = () => {
         {/* Button */}
 
         <View style={{ alignItems: 'center', marginTop: 20 }}>
-          <CustomButton text="Sign In" />
+          <CustomButton
+            text="Sign In"
+            onPress={() => navigation.navigate('MusicPlayer')}
+          />
         </View>
 
         {/* Apple */}

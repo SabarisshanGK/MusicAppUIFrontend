@@ -33,7 +33,7 @@ const OnboardingScreen = () => {
   };
 
   const skip = () => {
-    const lastSlideIndex = OnboardList.length;
+    const lastSlideIndex = OnboardList.length - 1;
     const offset = lastSlideIndex * width;
     ref?.current?.scrollToOffset({ offset });
     setCurrentIndex(lastSlideIndex);
